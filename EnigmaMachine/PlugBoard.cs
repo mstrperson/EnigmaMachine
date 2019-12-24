@@ -13,6 +13,9 @@ namespace EnigmaMachine
     /// </summary>
     public class PlugBoard
     {
+        /// <summary>
+        /// Bi-directional mapping for the plug board.
+        /// </summary>
         private Dictionary<char, char> Mapping;
 
         public override string ToString()
@@ -34,6 +37,9 @@ namespace EnigmaMachine
             return output;
         }
 
+        /// <summary>
+        /// Initialize a PlugBoard with nothing patched.
+        /// </summary>
         public PlugBoard()
         {
             Mapping = new Dictionary<char, char>();
