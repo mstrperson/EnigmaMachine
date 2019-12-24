@@ -12,6 +12,11 @@ namespace EnigmaMachine
     /// </summary>
     public class EnigmaMachine
     {
+        /// <summary>
+        /// Just a place to easily access the characters A-Z.
+        /// A better implementation of this program would use the character ASCII values instead.
+        /// However, this does facilitate an easy expansion to a larger character set using the Enigma Algorithm.
+        /// </summary>
         public static readonly string CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
         public override string ToString()
@@ -27,6 +32,10 @@ namespace EnigmaMachine
             return output;
         }
 
+        /// <summary>
+        /// Character to encode a SPACE in the text to be enciphered.
+        /// Traditionally, this is the letter X because of it's infrequent use in German
+        /// </summary>
         public char EncodeSpacesAs;
 
         /// <summary>
@@ -44,6 +53,9 @@ namespace EnigmaMachine
         /// </summary>
         private Reflector Reflector;
 
+        /// <summary>
+        /// Initalize an EnigmaMachine with a given set of hardware.
+        /// </summary>
         public EnigmaMachine(Rotor rotor1, Rotor rotor2, Rotor rotor3, Rotor rotor4 = null, Rotor rotor5 = null, Reflector reflector = null)
         {
             EncodeSpacesAs = 'X';
@@ -107,6 +119,13 @@ namespace EnigmaMachine
             return ch;
         }
 
+        /// <summary>
+        /// Encrypt or Decrypt a message using this Enigma Machine.
+        /// </summary>
+        /// <returns>
+        /// cipher text of the message if plaintext is provided; 
+        /// plaintext if cipher text is provided /and/ your initial settings are correct
+        /// </returns>
         public string Process(string message)
         {
             message = message.ToUpperInvariant().Replace(' ', EncodeSpacesAs);
