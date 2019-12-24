@@ -99,7 +99,9 @@ The example program provides an initialized Enigma Machine using standard rotors
 
 This is how an operator would use the Enigma Machine to encrypt or decrypt a message.
 1) Install Rotors and Reflector
-```EnigmaMachine enigmaMachine = new EnigmaMachine(Rotor.VIII, Rotor.VI, Rotor.II, reflector: Reflector.ETW);```
+```
+EnigmaMachine enigmaMachine = new EnigmaMachine(Rotor.VIII, Rotor.VI, Rotor.II, reflector: Reflector.ETW);
+```
 2) Insert Jumper wires to particular settings
 ```
 enigmaMachine.PlugBoard.Plug('A', 'T');
