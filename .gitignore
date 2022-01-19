@@ -2,3 +2,6 @@
 *.lock
 .vs/*
 EnigmaMachine/obj/*
+.idea
+EnigmaMachine/bin/*
+*.exe

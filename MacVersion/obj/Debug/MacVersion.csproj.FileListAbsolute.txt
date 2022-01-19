@@ -1,5 +1,0 @@
-/Users/jcox/Documents/EnigmaMachine/MacVersion/bin/Debug/MacVersion.exe
-/Users/jcox/Documents/EnigmaMachine/MacVersion/bin/Debug/MacVersion.pdb
-/Users/jcox/Documents/EnigmaMachine/MacVersion/obj/Debug/MacVersion.csprojAssemblyReference.cache
-/Users/jcox/Documents/EnigmaMachine/MacVersion/obj/Debug/MacVersion.exe
-/Users/jcox/Documents/EnigmaMachine/MacVersion/obj/Debug/MacVersion.pdb
