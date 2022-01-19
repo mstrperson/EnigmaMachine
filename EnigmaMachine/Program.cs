@@ -29,18 +29,19 @@ namespace EnigmaMachine
             Console.Write("Enter a Message:  ");
             Console.ForegroundColor = ConsoleColor.Cyan;
             string message = Console.ReadLine();
-            Console.ForegroundColor = ConsoleColor.White;
+            Console.ResetColor();
 
             string encrypted = enigmaMachine.Process(message);
 
             Console.Write("Encrypted:  ");
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine(encrypted);
-            Console.ForegroundColor = ConsoleColor.White;
+            Console.ResetColor();
             Console.ReadLine();
 
             // Emulate a second machine with the same settings
-            EnigmaMachine enigmaMachine2 = new EnigmaMachine(Rotor.VIII, Rotor.VI, Rotor.II, reflector: Reflector.ETW);
+            EnigmaMachine enigmaMachine2 = 
+                new EnigmaMachine(Rotor.VIII, Rotor.VI, Rotor.II, reflector: Reflector.ETW);
 
             enigmaMachine2.PlugBoard.Plug('A', 'T');
             enigmaMachine2.PlugBoard.Plug('E', 'Y');
@@ -59,6 +60,7 @@ namespace EnigmaMachine
             Console.Write("Decrypted:  ");
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(output);
+            Console.ResetColor();
             Console.ReadLine();
         }
 

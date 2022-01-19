@@ -60,17 +60,18 @@ namespace EnigmaMachine
         {
             EncodeSpacesAs = 'X';
             Rotors = new List<Rotor>() { rotor1, rotor2, rotor3 };
-            if(rotor4 != null)
+            if(!(rotor4 is null))
             {
                 Rotors.Add(rotor4);
-                if (rotor5 == null)
+                
+                if (rotor5 is null)
                     throw new EnigmaRulesException("Enigma Machines only had 3 or 5 rotors.");
 
                 Rotors.Add(rotor5);
             }
 
             PlugBoard = new PlugBoard();
-            Reflector = reflector == null ? Reflector.ETW : reflector;
+            Reflector = reflector ?? Reflector.ETW;
         }
 
         /// <summary>
@@ -78,7 +79,7 @@ namespace EnigmaMachine
         /// </summary>
         /// <param name="ch"></param>
         /// <returns>Encrypted character</returns>
-        public char Process(char ch)
+        private char Process(char ch)
         {
             if (!CHARACTERS.Contains(ch)) return ch;
 
@@ -110,9 +111,9 @@ namespace EnigmaMachine
             ch = PlugBoard[ch];
             //Console.WriteLine("{0}", ch);
 
-            for (int i = 0; i < Rotors.Count; i++)
+            foreach (var rotor in Rotors)
             {
-                if (!Rotors[i].Increment())
+                if (!rotor.Increment())
                     break;
             }
 
