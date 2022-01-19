@@ -80,7 +80,7 @@ namespace EnigmaMachine
             {
                 char ech = rotorVI.In(ch);
                 char och = rotorVI.Out(ech);
-                Console.WriteLine("{0} => {1} => {2}", ch, ech, och);
+                Console.WriteLine($"{ch} => {ech} => {och}");
             }
             Console.WriteLine("________________________________");
             Console.ReadLine();
@@ -89,7 +89,7 @@ namespace EnigmaMachine
             {
                 char ech = rotorI.In(ch);
                 char och = rotorI.Out(ech);
-                Console.WriteLine("{0} => {1} => {2}", ch, ech, och);
+                Console.WriteLine($"{ch} => {ech} => {och}");
             }
             Console.WriteLine("________________________________");
             Console.ReadLine();
@@ -105,7 +105,7 @@ namespace EnigmaMachine
                 char c4 = rotorI.Out(r);
                 char c5 = rotorVI.Out(c4);
                 char c6 = rotorIII.Out(c5);
-                Console.WriteLine("{0} => {1} => {2} => {3} => {4} => {5} => {6} => {7}", ch, c1, c2, c3, r, c4, c5, c6);
+                Console.WriteLine($"{ch} => {c1} => {c2} => {c3} => {r} => {c4} => {c5} => {c6}");
 
                 char dc1 = rotorIII.In(c6);
                 char dc2 = rotorVI.In(dc1);
@@ -114,7 +114,7 @@ namespace EnigmaMachine
                 char dc4 = rotorI.Out(dr);
                 char dc5 = rotorVI.Out(dc4);
                 char dc6 = rotorIII.Out(dc5);
-                Console.WriteLine("{7} <= {6} <= {5} <= {4} <= {3} <= {2} <= {1} <= {0}", c6, dc1, dc2, dc3, dr, dc4, dc5, dc6);
+                Console.WriteLine($"{dc6} <= {dc5} <= {dc4} <= {dr} <= {dc3} <= {dc2} <= {dc1} <= {c6}");
                 Console.WriteLine("______________________________________________________________________________________");
                 Console.ReadLine();
             }

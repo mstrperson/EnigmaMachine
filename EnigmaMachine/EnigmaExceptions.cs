@@ -17,7 +17,7 @@ namespace EnigmaMachine
         {
             if ('A' <= ch && ch <= 'Z') return;
 
-            throw new EnigmaRulesException(string.Format("'{0}' is not a valid character for the Engima cipher.", ch));
+            throw new EnigmaRulesException($"'{ch}' is not a valid character for the Engima cipher.");
         }
     }
 }

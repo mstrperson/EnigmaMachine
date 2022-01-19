@@ -34,7 +34,7 @@ namespace EnigmaMachine
 
         public override string ToString()
         {
-            string output = string.Format("Rotor {0} [{1}]:  ", Number, CHARACTERS[Offset]);
+            string output = $"Rotor {Number} [{CHARACTERS[Offset]}]:  ";
 
             for (int i = 0; i < 26; i++)
             {

@@ -17,7 +17,7 @@ namespace EnigmaMachine
 
         public override string ToString()
         {
-            return string.Format("Reflector:  {0}", Mapping);
+            return $"Reflector:  {Mapping}";
         }
 
         public Reflector(string mapping)

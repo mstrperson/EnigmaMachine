@@ -21,13 +21,13 @@ namespace EnigmaMachine
 
         public override string ToString()
         {
-            string output = string.Format("Enigma Machine:{0}\t{1}{0}", Environment.NewLine, PlugBoard);
+            string output = $"Enigma Machine:{Environment.NewLine}\t{PlugBoard}{Environment.NewLine}";
             foreach(Rotor rotor in Rotors)
             {
-                output += string.Format("\t{0}{1}", rotor, Environment.NewLine);
+                output += $"\t{rotor}{Environment.NewLine}";
             }
 
-            output += string.Format("\t{0}", Reflector);
+            output += $"\t{Reflector}";
 
             return output;
         }

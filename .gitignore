@@ -5,3 +5,4 @@ EnigmaMachine/obj/*
 .idea
 EnigmaMachine/bin/*
 *.exe
+.DS_Store
